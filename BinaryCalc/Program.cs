@@ -116,7 +116,7 @@ namespace BinaryCalc
             var BinaryRes = string.Join("", result); // собираем из элементов списка строку с пустым разделителем
             var DecRes = GetDecFromBinary(BinaryRes); // переводим в десятичный вариант
             var overflow = firstOver || secondOver ? 1 : 0; // определяем для ответа, было ли переполнение
-            var evenness = CheckForEven(BSign+BinaryRes) ? 1 : 0; // определяем десятичную четность
+            var evenness = CheckForEven(BSing+BinaryRes) ? 1 : 0; // определяем десятичную четность
                 
             return $"Binary: {BSing}{BinaryRes}\nDecimal: {sign}{DecRes}\nBinary evenness: {evenness}" +
                    $"\nTransfer: {transfer}\nOverflow: {overflow}";
